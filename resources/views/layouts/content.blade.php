@@ -26,18 +26,20 @@
 @section('app')
     {!! Dcat\Admin\Admin::asset()->styleToHtml() !!}
 
-    <div class="content-header">
-        @yield('content-header')
-    </div>
+    <div class="content-border">
+      <div class="content-header">
+          @yield('content-header')
+      </div>
 
-    <div class="content-body" id="app">
-        {{-- 页面埋点--}}
-        {!! admin_section(Dcat\Admin\Admin::SECTION['APP_INNER_BEFORE']) !!}
+      <div class="content-body" id="app">
+          {{-- 页面埋点--}}
+          {!! admin_section(Dcat\Admin\Admin::SECTION['APP_INNER_BEFORE']) !!}
 
-        @yield('content')
+          @yield('content')
 
-        {{-- 页面埋点--}}
-        {!! admin_section(Dcat\Admin\Admin::SECTION['APP_INNER_AFTER']) !!}
+          {{-- 页面埋点--}}
+          {!! admin_section(Dcat\Admin\Admin::SECTION['APP_INNER_AFTER']) !!}
+      </div>
     </div>
 
     {!! Dcat\Admin\Admin::asset()->scriptToHtml() !!}
